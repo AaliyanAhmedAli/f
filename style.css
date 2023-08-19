@@ -1,0 +1,25 @@
+.navbar{
+    background: var(--primary-color, #7749F8) !important;
+display: flex !important;
+align-items: center !important;
+justify-content: space-between !important;
+padding: 6px 166px !important;
+color: white;
+}
+.btn{
+    color: #FFF !important;
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.24px;
+}
+.card{
+    width: 456px;
+    height: 449px;
+    flex-shrink: 0;
+    width: 456px;
+height: 449px;
+flex-shrink: 0;
+}
