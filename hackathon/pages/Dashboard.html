@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <button
+                class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarExample01"
+                aria-controls="navbarExample01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                >
+                <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarExample01">
+                    Personal Blogging App
+                </div>
+                <a href="../index.html">         
+                           <button id="logout-button" class="btn">Logout</button>
+                </a>
+            </div>
+            </nav><br><br>  
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">
+                    <h2>Dashboard</h2></span>
+                </div>
+
+            </nav>
+            
+            <!-- Navbar -->
+        
+            <!-- Jumbotron -->
+            
+            <!-- Jumbotron -->
+
+        
+
+<br>
+
+
+    <center>
+        <div id="main">
+            <table>
+                <td>
+                    <input type="text" class="inp" id="title" placeholder="Placeholder" required="required">
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <textarea id="description" cols="100" rows="5" placeholder="What is in your mind"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <button id="btn">Publish Blog</button>
+        </div>
+    </center>
+    <div id="aa">
+        <h2>My Blogs</h2>
+    </div>
+    
+    <div id="show">
+      <div class="card w-75 mb-3">
+        <div class="card-body">
+          <a href="../pages/profile.html">
+            
+            <img src="../images/user.png" alt="">
+          </a>
+          <center>
+            <h5 class="card-title">An Action Button Could Be <br> Coming to the <br> iPhone 15</h5>
+          <p class="card-text">Apple could be putting an Action button on your next iPhone. According to a July report from MacRumors, code in the fourth iOS 17 developer beta hints at functionality for an Action button on the next-gen iPhone 15 Pro and Pro Max models.
+            Apple introduced the Action button on the Apple Watch Ultra. It's a physical button on the side of the Apple Watch Ultra that allows you to run a preselected function or program when you press it without unlocking your device or navigating to an app. Some of the preselected functions include starting a stopwatch, beginning a workout and turning on your flashlight.</p>
+          </center>
+            <a href="#" class="btn my-btn">Delete</a>
+            <a href="#" class="btn my-btn">Edite</a>
+          </div>
+      </div>
+    </div>
+    
+    
+    <div id="show">
+      <div class="card w-75 mb-3">
+        <div class="card-body">
+          <a href="../pages/profile.html">
+            
+            <img src="../images/user.png" alt="">
+          </a>
+          <center>
+            <h5 class="card-title">What Is the Event Loop and <br> How Does It Improve App <br> Performance?</h5>
+          <p class="card-text">Apple could be putting an Action button on your next iPhone. According to a July report from MacRumors, code in the fourth iOS 17 developer beta hints at functionality for an Action button on the next-gen iPhone 15 Pro and Pro Max models.
+            Apple introduced the Action button on the Apple Watch Ultra. It's a physical button on the side of the Apple Watch Ultra that allows you to run a preselected function or program when you press it without unlocking your device or navigating to an app. Some of the preselected functions include starting a stopwatch, beginning a workout and turning on your flashlight.</p>
+          </center>
+            <a href="#" class="btn my-btn">Delete</a>
+            <a href="#" class="btn my-btn">Edite</a>
+          </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js "></script>
+              <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js "></script>
+              <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+              <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+        <script>
+              
+                
+        const firebaseConfig = {
+          
+          apiKey: "AIzaSyBEDzzo5U16CzvjwjZAF52JFJVHtYcqxlw",
+           authDomain: "blogging-hamd.firebaseapp.com",
+           projectId: "blogging-hamd",
+           storageBucket: "blogging-hamd.appspot.com",
+           messagingSenderId: "1082381242714",
+           appId: "1:1082381242714:web:8e0fc3375d1fd2a66fe363"
+         };
+        
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);  
+         
+          let db = firebase.firestore();
+         let auth = firebase.auth();
+        
+            
+        
+        firebase.auth().onAuthStateChanged(async function(user){
+        
+          
+        })
+        
+        
+        document.getElementById("createpost").addEventListener("submit",(e)=>{
+          e.preventDefault()
+         let heading = document.getElementById("heading")
+         let paragraph = document.getElementById("paragraph")
+         let user = firebase.auth().currentUser;
+         console.log(user)
+          db.collection("blogs")
+                 .add({
+        
+                  title:heading.value,
+                  text:paragraph.value,
+                  userid: user.uid
+        
+                 }) 
+                 .then((docRef) =>{
+                    console.log("Document written with ID: ", docRef.id)
+                    
+                   
+                    // ulodadedMSG.innerHTML = "Uploaded sucessfully"
+                  //   console.log(docRef.data().BlogImg)
+                 })
+                 .catch((e) => {
+              
+                    console.log("eroorrr agaya", e)
+                 })
+        })
+        
+        </script>
+        </body>
+        </html>
+
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="module" src="../js/Dashbo.js"></script>
+</body>
+</html> 
